@@ -52,7 +52,7 @@ let monumentRotor = null;
 let monumentWaterMat = null;
 
 async function init() {
-  const res = await fetch("/data/sandefjord.json");
+  const res = await fetch(import.meta.env.BASE_URL + "data/sandefjord.json");
   const data = await res.json();
 
   const water = buildWater(data.water);
